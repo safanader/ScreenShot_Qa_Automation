@@ -31,6 +31,8 @@ public class Test_Logic {
 				System.out.println("i will keep  "+ list.get(i).getText());
 			}
 		}
+		System.out.println(list.size()+" this is after the remove process");
+		
 		Date currentDate = new Date();
 		String TheAcutalDate = currentDate.toString().replace(":", "-");
 		TakesScreenshot src = ((TakesScreenshot) driver) ; 

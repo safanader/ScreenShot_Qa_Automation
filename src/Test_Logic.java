@@ -22,11 +22,14 @@ public class Test_Logic {
 		int listItem = list.size();
 		System.out.println(listItem + "  this is the orginal number");
 		for(int i=0 ; i<listItem;i++) {
-			if(i%2!=0) {
-				System.out.println(i + " this is the number of items i want remove");
+			if(i%2==0) {
 				list.get(i).click();
+				System.err.println("sorry i will remove"+ list.get(i).getText());
 				driver.findElement(By.xpath("//*[@id=\"remove\"]")).click();	 
-			}	
+			}	else
+			{
+				System.out.println("i will keep  "+ list.get(i).getText());
+			}
 		}
 		Date currentDate = new Date();
 		String TheAcutalDate = currentDate.toString().replace(":", "-");
